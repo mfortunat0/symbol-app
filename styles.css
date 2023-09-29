@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: var(--gray);
+}
+
+body {
+  background-image: linear-gradient(to right, #c5f6da, #96bcf4);
+}
+
+:root {
+  --black: #000000;
+  --gray: #0e1b23;
+  --gray2: #26373f;
+  --blue: #acd7e9;
+  --blue2: #a1c9f2;
+  --blueDark: #95b9de;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 12px 48px;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 999;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.headerButtonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25%;
+}
+
+.headerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 8px;
+  transition: all 0.3s;
+  border-radius: 4px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+.headerButton:last-child {
+  font-size: 0.9rem;
+}
+
+.headerButton:hover,
+.headerLink:hover {
+  border: 1px solid;
+  color: white;
+  background-color: black;
+  outline: none;
+}
+
+.headerTitleContainer {
+  display: flex;
+  width: 75%;
+  align-items: center;
+}
+
+.headerTitle {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 8%;
+  height: 20%;
+}
+
+.logoImage {
+  height: 20%;
+  width: 30%;
+}
+
+.productContainer {
+  margin: 12px 24px;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 600px;
+  gap: 8px;
+}
+
+.productImage {
+  border-radius: 2px;
+  height: 60%;
+}
+
+.productName {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.productName:hover {
+  text-decoration: underline;
+}
+
+.productPrice {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.productParcela {
+  font-size: 0.8rem;
+}
+
+.productButton {
+  background-color: var(--gray);
+  color: #eee;
+  padding: 8px 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.productButton:hover {
+  filter: brightness(1.4);
+}
