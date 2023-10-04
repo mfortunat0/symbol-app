@@ -9,9 +9,10 @@
   text-decoration: none;
   color: var(--gray);
 }
-/*
-  background-image: linear-gradient(to right, #c5f6da, #96bcf4);
-*/
+
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --black: #000000;
@@ -38,8 +39,9 @@
 
 .headerButtonsContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 25%;
+  gap: 8px;
 }
 
 .headerButton {
@@ -97,35 +99,58 @@
 }
 
 .productReleases {
-  padding: 96px;
+  padding: 32px 96px 96px 96px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 24px;
 }
 
-.productReleases > h2 {
+.releaseTitle,
+.productTitle {
   text-align: center;
-  width: 100%;
   font-weight: 300;
   font-size: 3rem;
+  width: 100%;
+}
+
+.releaseTitle {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #c5f6da, #96bcf4);
+  background-image: linear-gradient(to left, var(--blueDark), var(--gray2));
+  background-size: 200% 100%;
+  animation: gradientAnimation 2s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 .productContainer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 12px 96px 96px 96px;
+  padding: 36px 96px 96px 96px;
   width: 100%;
   gap: 24px;
   background-image: linear-gradient(to right, #c5f6da, #96bcf4);
 }
 
+.productTitle {
+  color: #fff;
+}
+
 .productItem {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,6 +166,7 @@
 .productName {
   font-size: 0.9rem;
   font-weight: 300;
+  margin-top: 8px;
 }
 
 .productName:hover {
@@ -156,14 +182,28 @@
   font-size: 0.8rem;
 }
 
-.productButton {
+.productButton,
+.productLabel {
   background-color: var(--gray);
   color: #eee;
-  padding: 8px 18px;
+  padding: 6px 18px;
+  font-size: 14px;
   border: 0;
   outline: none;
   cursor: pointer;
   border-radius: 2px;
+  text-align: center;
+}
+
+.productButton {
+  margin-top: 8px;
+}
+
+.productLabel {
+  position: absolute;
+  top: 8px;
+  right: -16px;
+  cursor: default;
 }
 
 .productButton:hover {
@@ -172,8 +212,8 @@
 
 .whatsappFloatButton {
   position: fixed;
-  bottom: 20px; /* Distância do fundo da página */
-  right: 20px; /* Distância da borda direita da página */
+  bottom: 20px;
+  right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,13 +258,6 @@
 }
 
 @media (max-width: 645px) {
-  .headerButtonsContainer {
-    width: 35%;
-  }
-  .headerTitleContainer {
-    width: 65%;
-  }
-
   .footerLocalization {
     display: none;
   }
@@ -237,6 +270,12 @@
   .productContainer,
   .productReleases {
     padding: 24px;
+  }
+  .headerButtonsContainer {
+    width: 40%;
+  }
+  .headerTitleContainer {
+    width: 60%;
   }
 }
 
@@ -261,6 +300,9 @@
   }
   .productImage {
     height: 168px;
+  }
+  .releaseTitle {
+    font-size: 2rem;
   }
 }
 

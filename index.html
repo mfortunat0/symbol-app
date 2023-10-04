@@ -13,11 +13,11 @@
         <h1 class="headerTitle">Symbol store</h1>
       </div>
       <div class="headerButtonsContainer">
-        <a class="headerButton" href="">
+        <a class="headerButton" href="#produtos">
           Produtos &nbsp;
           <FaCaretDown />
         </a>
-        <a class="headerButton" href=""> Contato </a>
+        <a class="headerButton" href="#contatos"> Contato </a>
       </div>
     </nav>
     <main>
@@ -29,8 +29,9 @@
         />
       </section>
       <section class="productReleases">
-        <h2>Lançamentos</h2>
+        <h2 class="releaseTitle">Lançamentos</h2>
         <div class="productItem">
+          <span class="productLabel">Novo</span>
           <img
             class="productImage"
             src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
@@ -39,9 +40,15 @@
           <a class="productName" href=""> Nike Dunk Low Lilás </a>
           <p class="productPrice">R$189,00</p>
           <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
+          <a
+            class="productButton"
+            href="https://api.whatsapp.com/send?phone=5512992269582&text=eu quero este item"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
         </div>
         <div class="productItem">
+          <span class="productLabel">Novo</span>
           <img
             class="productImage"
             src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
@@ -50,9 +57,15 @@
           <a class="productName" href=""> Nike Dunk Low Lilás </a>
           <p class="productPrice">R$189,00</p>
           <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
         </div>
         <div class="productItem">
+          <span class="productLabel">Novo</span>
           <img
             class="productImage"
             src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
@@ -61,67 +74,102 @@
           <a class="productName" href=""> Nike Dunk Low Lilás </a>
           <p class="productPrice">R$189,00</p>
           <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
-        </div>
-      </section>
-      <section class="productContainer">
-        <div class="productItem">
-          <img
-            class="productImage"
-            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
-            alt=""
-          />
-          <a class="productName" href=""> Nike Dunk Low Lilás </a>
-          <p class="productPrice">R$189,00</p>
-          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
-        </div>
-        <div class="productItem">
-          <img
-            class="productImage"
-            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
-            alt=""
-          />
-          <a class="productName" href=""> Nike Dunk Low Lilás </a>
-          <p class="productPrice">R$189,00</p>
-          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
-        </div>
-        <div class="productItem">
-          <img
-            class="productImage"
-            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
-            alt=""
-          />
-          <a class="productName" href=""> Nike Dunk Low Lilás </a>
-          <p class="productPrice">R$189,00</p>
-          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
-        </div>
-        <div class="productItem">
-          <img
-            class="productImage"
-            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
-            alt=""
-          />
-          <a class="productName" href=""> Nike Dunk Low Lilás </a>
-          <p class="productPrice">R$189,00</p>
-          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
-        </div>
-        <div class="productItem">
-          <img
-            class="productImage"
-            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
-            alt=""
-          />
-          <a class="productName" href=""> Nike Dunk Low Lilás </a>
-          <p class="productPrice">R$189,00</p>
-          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
-          <button class="productButton">EU QUERO !!!</button>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
         </div>
       </section>
-      <a class="whatsappFloatButton" href="https://wa.me/5512992269582">
+      <section class="productContainer" id="produtos">
+        <h2 class="productTitle">Disponiveis</h2>
+        <div class="productItem">
+          <img
+            class="productImage"
+            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
+            alt=""
+          />
+          <a class="productName" href=""> Nike Dunk Low Lilás </a>
+          <p class="productPrice">R$189,00</p>
+          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
+        </div>
+        <div class="productItem">
+          <img
+            class="productImage"
+            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
+            alt=""
+          />
+          <a class="productName" href=""> Nike Dunk Low Lilás </a>
+          <p class="productPrice">R$189,00</p>
+          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
+        </div>
+        <div class="productItem">
+          <img
+            class="productImage"
+            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
+            alt=""
+          />
+          <a class="productName" href=""> Nike Dunk Low Lilás </a>
+          <p class="productPrice">R$189,00</p>
+          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
+        </div>
+        <div class="productItem">
+          <img
+            class="productImage"
+            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
+            alt=""
+          />
+          <a class="productName" href=""> Nike Dunk Low Lilás </a>
+          <p class="productPrice">R$189,00</p>
+          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
+        </div>
+        <div class="productItem">
+          <img
+            class="productImage"
+            src="https://drive.google.com/uc?export=view&id=1QGiSmRN8DxVXK4ZT851JQbFgauA3dVCt"
+            alt=""
+          />
+          <a class="productName" href=""> Nike Dunk Low Lilás </a>
+          <p class="productPrice">R$189,00</p>
+          <p class="productParcela"><b>12</b>x DE <b>R$18,37</b></p>
+          <a
+            class="productButton"
+            href="https://wa.me/5512991100516"
+            target="_blank"
+            >EU QUERO !!!</a
+          >
+        </div>
+      </section>
+      <a
+        class="whatsappFloatButton"
+        href="https://wa.me/5512991100516"
+        target="_blank"
+      >
         <svg
           baseProfile="tiny"
           class="whatsapp"
@@ -134,10 +182,10 @@
         </svg>
       </a>
     </main>
-    <footer class="footerContainer">
+    <footer class="footerContainer" id="contatos">
       <div class="footerContact">
         <h2>Contatos</h2>
-        <a href="https://www.instagram.com/symbol.store/">
+        <a href="https://www.instagram.com/symbol.store/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -162,7 +210,7 @@
             />
           </svg>
         </a>
-        <a href="https://wa.me/5512992269582">
+        <a href="https://wa.me/5512991100516" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
