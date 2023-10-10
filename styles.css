@@ -58,7 +58,7 @@ html {
   transition: all 0.3s;
   border-radius: 4px;
   text-align: center;
-  color: black;
+  color: var(--black);
   text-decoration: none;
 }
 .headerButton:last-child {
@@ -69,7 +69,7 @@ html {
 .headerLink:hover {
   border: 1px solid;
   color: white;
-  background-color: black;
+  background-color: var(--gray);
   outline: none;
 }
 
@@ -165,7 +165,7 @@ html {
 
 .productName {
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 8px;
 }
 
@@ -193,6 +193,7 @@ html {
   cursor: pointer;
   border-radius: 2px;
   text-align: center;
+  font-weight: bold;
 }
 
 .productButton {
@@ -258,6 +259,7 @@ html {
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -270,14 +272,13 @@ html {
 
 .modalContent {
   background-color: #fff;
-  padding-right: 20px;
   border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  width: 50%;
+  width: 576px;
   height: 60%;
 }
 
@@ -290,12 +291,12 @@ html {
 }
 
 .modalImage {
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 
 .modalForm {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -305,10 +306,10 @@ html {
 .bar {
   border: none;
   border-top: 2px solid var(--blueDark);
-  margin: 20px 0;
+  margin-bottom: 16px;
 }
 
-.modalTitle{
+.modalTitle {
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -320,12 +321,14 @@ html {
   font-size: 14px;
   border: 0;
   outline: none;
-  cursor: pointer;
   border-radius: 2px;
   text-align: center;
+  font-weight: bold;
+  transition: filter 0.1s;
+  cursor: pointer;
 }
 
-.modalFormWrap{
+.modalFormWrap {
   display: flex;
   justify-content: space-between;
 }
@@ -334,9 +337,48 @@ html {
   font-weight: bold;
 }
 
-@media (max-width: 645px) {
-  .footerLocalization {
-    display: none;
+.modalFormWrap > select {
+  border: none;
+  background-color: var(--gray);
+  color: #fff;
+  outline: none;
+  border-radius: 2px;
+  transition: filter 0.1s;
+  cursor: pointer;
+  padding: 4px;
+}
+
+option {
+  color: #fff;
+}
+
+.modalFormWrap > input {
+  border: none;
+  background-color: var(--gray);
+  color: #fff;
+  outline: none;
+  border-radius: 2px;
+  transition: filter 0.1s;
+  cursor: pointer;
+  text-align: center;
+  width: 38px;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  padding: 4px;
+}
+.modalFormWrap > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.modalFormWrap > select:hover,
+.modalForm > a:hover {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 1024px) {
+  .logoImage {
+    min-height: 264px;
+    min-width: 264px;
   }
 }
 
@@ -354,12 +396,42 @@ html {
   .headerTitleContainer {
     width: 60%;
   }
+  .modalContent {
+    width: 576px;
+  }
 }
 
-@media (max-width: 1024px) {
-  .logoImage {
-    min-height: 264px;
-    min-width: 264px;
+@media (max-width: 740px) {
+  .modalContent {
+    width: 92%;
+  }
+}
+
+@media (max-width: 645px) {
+  .footerLocalization {
+    display: none;
+  }
+  .modalContent {
+    width: 96%;
+  }
+
+  .modalImage {
+    width: 40%;
+  }
+
+  .modalForm {
+    width: 60%;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+  .modalFormWrap > p {
+    font-size: 16px;
+  }
+
+  .modalContent {
+    height: 50%;
   }
 }
 
@@ -381,6 +453,35 @@ html {
   .releaseTitle {
     font-size: 2rem;
   }
+  .modalTitle {
+    font-size: 16px;
+  }
+  .modalFormWrap > p {
+    font-size: 14px;
+  }
+  .modalFormWrap > input,
+  .modalFormWrap > select {
+    padding: 0;
+  }
+  .modalForm {
+    padding: 24px 8px 8px 8px;
+  }
+  .modalContent {
+    height: 45%;
+  }
+}
+
+@media (max-width: 374px) {
+  .modalTitle {
+    font-size: 14px;
+  }
+  .modalFormWrap > p {
+    font-size: 13px;
+  }
+  .modalClose {
+    top: -4px;
+    right: 4px;
+  }
 }
 
 @media (max-width: 324px) {
@@ -389,5 +490,17 @@ html {
   }
   .productContainer {
     gap: 12px;
+  }
+  .modalTitle {
+    font-size: 13px;
+  }
+  .modalFormWrap > p {
+    font-size: 12px;
+  }
+  .modalForm {
+    padding: 12px 8px 8px 8px;
+  }
+  .modalContent {
+    height: 35%;
   }
 }
